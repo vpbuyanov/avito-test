@@ -1,0 +1,11 @@
+server:
+  address: 0.0.0.0:9000
+
+postgres:
+  # 0.0.0.0 - to run in cmd
+  # db_avito_test - to run in docker
+  host: db_avito_test
+  port: 5432
+  user: postgres
+  password: postgres
+  dbname: avitoTest
