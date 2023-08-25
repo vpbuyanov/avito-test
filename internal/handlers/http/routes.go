@@ -10,5 +10,9 @@ type Routes struct {
 }
 
 func (routes *Routes) RegisterRoutes(app fiber.Router) {
-	app.Post("/segments/create", routes.createSegments)
+	app.Post("/user", routes.checkUserSegments)
+
+	app.Post("/segments", routes.createSegments)
+
+	app.Delete("/segments", routes.deleteSegments)
 }

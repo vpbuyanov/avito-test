@@ -26,30 +26,22 @@ func (use *UseCase) UseCaseCreateSegments(ctx *fiber.Ctx, request *entity.Change
 	return response, nil
 }
 
-//func (use *UseCase) UseCaseInvoice(ctx *fiber.Ctx, request *entity.Request, response *entity.Response) (*entity.Response, error) {
-//	response, err := use.repo.RepoInvoice(ctx, request, response)
-//	if err != nil {
-//		response.Status = "Error"
-//		return response, err
-//	}
-//
-//	return response, nil
-//}
-//
-//func (use *UseCase) UseCaseWithdraw(ctx *fiber.Ctx, request *entity.Request, response *entity.Response) (*entity.Response, error) {
-//	response, err := use.repo.RepoWithdraw(ctx, request, response)
-//	if err != nil {
-//		response.Status = "Error"
-//		return response, nil
-//	}
-//	return response, nil
-//}
-//
-//func (use *UseCase) UseCaseCheckStatusWallet(ctx *fiber.Ctx, request *entity.CheckWalletRequest, response *entity.CheckWalletResponse) (*entity.CheckWalletResponse, error) {
-//	response, err := use.repo.CheckWallet(ctx, request, response)
-//	if err != nil {
-//		response.Status = "Error"
-//		return response, nil
-//	}
-//	return response, nil
-//}
+func (use *UseCase) UseCaseDeleteSegments(ctx *fiber.Ctx, request *entity.ChangeSegmentsRequest, response *entity.ChangeSegmentsResponse) (*entity.ChangeSegmentsResponse, error) {
+	response, err := use.repo.RepoDeleteSegments(ctx, request, response)
+	if err != nil {
+		response.Status = "Error"
+		return response, nil
+	}
+
+	return response, nil
+}
+
+func (use *UseCase) UseCaseGetActiveUserSegments(ctx *fiber.Ctx, request *entity.CheckSegmentsRequest, response *entity.CheckSegmentsResponse) (*entity.CheckSegmentsResponse, error) {
+	response, err := use.repo.RepoGetActiveUserSegments(ctx, request, response)
+	if err != nil {
+		response.Status = "Error"
+		return response, nil
+	}
+
+	return response, nil
+}
