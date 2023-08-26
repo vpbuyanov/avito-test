@@ -21,14 +21,14 @@ Method `POST`
   "name": "your_name"
 }
 ```
-URL `/user/check`
+URL `/api/user/check`
 Method `POST`
 ```json
 {
   "user_id": 1
 }
 ```
-URL `/user/change`
+URL `/api/user/change`
 Method `POST`
 ```json
 {
@@ -37,14 +37,14 @@ Method `POST`
   "del_user": [3, 4]
 }
 ```
-URL `/segments`
+URL `/api/segments`
 Method `POST`
 ```json
 {
   "slug": "AVITO_VOICE_MESSAGES"
 }
 ```
-URL `/segments`
+URL `/api/segments`
 Method `DELETE`
 ```json
 {
@@ -53,7 +53,7 @@ Method `DELETE`
 ```
 
 ### JSON Response
-URL `/segments`
+URL `/api/segments`
 Method `POST`
 ```json
 {
@@ -62,7 +62,7 @@ Method `POST`
   "status": "Success"
 }
 ```
-URL `/segments`
+URL `/api/segments`
 Method `DELETE`
 ```json
 {
@@ -71,7 +71,7 @@ Method `DELETE`
   "status": "Success"
 }
 ```
-URL `/api/user`
+URL `/api/api/user`
 Method `POST`
 ```json
 {
@@ -79,7 +79,7 @@ Method `POST`
   "status": "Success"
 }
 ```
-URL `/user/change`
+URL `/api/user/change`
 Method `POST`
 ```json
 {
@@ -88,7 +88,7 @@ Method `POST`
   "Status": "Success"
 }
 ```
-URL `/user/check`
+URL `/api/user/check`
 Method `POST`
 ```json
 {
