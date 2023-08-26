@@ -45,3 +45,25 @@ func (use *UseCase) UseCaseGetActiveUserSegments(ctx *fiber.Ctx, request *entity
 
 	return response, nil
 }
+
+func (use *UseCase) UseCaseCreateUser(ctx *fiber.Ctx, request *entity.CreateUserRequest, response *entity.CreateUserResponse) (*entity.CreateUserResponse, error) {
+	response, err := use.repo.RepoCreateUser(ctx, request, response)
+
+	if err != nil {
+		response.Status = "Error"
+		return response, nil
+	}
+
+	return response, nil
+}
+
+func (use *UseCase) UseCaseSetUserSegments(ctx *fiber.Ctx, request *entity.ChangeUserSegmentsRequest, response *entity.ChangeUserSegmentsResponse) (*entity.ChangeUserSegmentsResponse, error) {
+	response, err := use.repo.RepoSetUserSegments(ctx, request, response)
+
+	if err != nil {
+		response.Status = "Error"
+		return response, nil
+	}
+
+	return response, nil
+}
