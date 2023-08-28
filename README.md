@@ -71,7 +71,7 @@ Method `DELETE`
   "status": "Success"
 }
 ```
-URL `/api/api/user`
+URL `/api/user`
 Method `POST`
 ```json
 {

@@ -1,7 +1,6 @@
 package usecase
 
 import (
-	"avito-test/internal/databases/repos"
 	"avito-test/internal/entity"
 	"github.com/gofiber/fiber/v2"
 )
@@ -10,7 +9,7 @@ type UseCase struct {
 	repo Repo
 }
 
-func NewUseCase(r *repos.Repositories) *UseCase {
+func NewUseCase(r Repo) *UseCase {
 	return &UseCase{
 		repo: r,
 	}

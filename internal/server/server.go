@@ -10,10 +10,10 @@ import (
 
 type Server struct {
 	config  *config.Config
-	usecase *usecase.UseCase
+	usecase usecase.UC
 }
 
-func NewServer(config config.Config, useCase *usecase.UseCase) *Server {
+func NewServer(config config.Config, useCase usecase.UC) *Server {
 	return &Server{
 		config:  &config,
 		usecase: useCase,

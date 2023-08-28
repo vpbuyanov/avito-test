@@ -6,7 +6,7 @@ import (
 )
 
 type Routes struct {
-	Usecase *usecase.UseCase
+	Usecase usecase.UC
 }
 
 func (routes *Routes) RegisterRoutes(app fiber.Router) {
