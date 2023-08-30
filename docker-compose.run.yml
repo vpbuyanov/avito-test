@@ -33,6 +33,7 @@ services:
     container_name: server_avito_test
     ports:
       - "9000:9000"
+    command: ["go", "run", "cmd", "migrate", "main.go"]
 
 volumes:
   postgres-data:

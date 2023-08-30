@@ -27,5 +27,12 @@ services:
           cpus: '1'
           memory: 4G
 
+  server:
+    build: .
+    image: buyanse/avito-test:latest
+    container_name: server_avito_test
+    ports:
+      - "9000:9000"
+
 volumes:
   postgres-data:

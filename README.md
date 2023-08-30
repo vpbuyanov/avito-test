@@ -1,18 +1,22 @@
-# START
+## Quick start
 
-### DB and API
+---
+### Run
+Для запуска приложения и его зависимостей
 ``` shell
-docker compose -f docker-compose.run.yml up postgres server -d
+docker compose -f docker-compose.run.yml up -d
 ```
----
 
-### migrations
-```shell
-go run migrations/create-migrations.go
+
+### Debug
+Для запуска зависимостей без запуска самого приложения
+``` shell
+docker compose -f docker-compose.debug.yml up -d
 ```
----
 
 ## Handlers
+
+---
 ### JSON Request
 URL `/api/user`
 Method `POST`
@@ -93,7 +97,7 @@ Method `POST`
 ```json
 {
   "segments": [
-    "AVITO_VOICE_1", 
+    "AVITO_VOICE_1",
     "AVITO_VOICE_Seva"
   ],
   "Status": "Success"
